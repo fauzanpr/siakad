@@ -20,6 +20,10 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+    <form action="{{ route('search') }}" method="GET">
+        <input type="search" name="search">
+        <button type="submit" class="btn btn-warning">Search</button>
+    </form>
     <table class="table table-bordered">
         <tr>
             <th>Nim</th>
@@ -46,4 +50,5 @@
             </tr>
         @endforeach
     </table>
+    {{$mahasiswa -> links()}}
 @endsection
